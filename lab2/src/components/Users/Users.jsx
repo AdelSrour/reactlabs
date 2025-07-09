@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Users from "./Users.json";
+import Userslist from "./Users.json";
 import Usercard from "../Usercard/Usercard";
-import "./Home.css";
+import "./Users.css";
 
-export default function Home() {
+export default function Users() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [errorMessage, setError] = useState("");
   useEffect(() => {
-    setUsers(Users);
+    setUsers(Userslist);
   }, []);
 
   function searchUsers(searchInput) {
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(searchInput)) {
       setError(`${searchInput} is not a valid email!`);
-      setUsers(Users);
+      setUsers(Userslist);
       return;
     }
-    let foundResults = Users.filter((userData) => {
+    let foundResults = Userslist.filter((userData) => {
       return userData.email.toLowerCase() === searchInput.toLowerCase();
     });
     if (foundResults.length > 0) {
@@ -25,7 +25,7 @@ export default function Home() {
       setUsers(foundResults);
     } else {
       setError(`No results for ${searchInput} Try again!`);
-      setUsers(Users);
+      setUsers(Userslist);
     }
   }
   return (

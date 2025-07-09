@@ -1,0 +1,43 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.input-side {
+  width: 80%;
+}
+
+.input-side input {
+  width: 100%;
+  padding: 10px;
+}
+
+.btn-side {
+  width: 19%;
+}
+
+.btn-side button {
+  width: 100%;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+thead td {
+  background-color: grey;
+  padding: 10px;
+}
+
+.ischecked {
+  text-decoration: line-through;
+}
+
+.delbtn {
+  color: red;
+  cursor: pointer;
+}
