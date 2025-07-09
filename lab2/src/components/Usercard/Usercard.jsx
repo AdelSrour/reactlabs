@@ -11,7 +11,11 @@ export default function Usercard({ userData }) {
           </div>
           <h4 className="mb-1">{userData?.username}</h4>
           <i
-            className="fa-solid fa-star position-absolute fs-3"
+            className={
+              userData?.isValid
+                ? "fa-solid fa-star position-absolute fs-3 text-secondary"
+                : "fa-solid fa-star position-absolute fs-3 text-warning"
+            }
             style={{ top: "50px", right: "50px" }}
           ></i>
           <span className="text-muted">{userData?.phoneNumber}</span>
