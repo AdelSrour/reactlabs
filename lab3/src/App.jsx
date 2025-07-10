@@ -4,7 +4,7 @@ import Details from "./components/Details/Details";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/reactlabs/lab3/dist/"}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details/:movieId" element={<Details />} />
